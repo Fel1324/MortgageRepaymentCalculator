@@ -1,6 +1,6 @@
 #calculator {
   background-color: var(--white);
-  padding: 1.25rem;
+  padding: 1.25rem 1.25rem 0;
 }
 
 .main-title {

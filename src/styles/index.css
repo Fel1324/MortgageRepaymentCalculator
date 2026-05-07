@@ -1,5 +1,6 @@
 @import url("./calculator.css");
 @import url("./calculator-form.css");
+@import url("./results.css");
 
 *,
 *::after,
@@ -33,6 +34,12 @@ html, body {
   font-size: 1rem;
   font-weight: 500;
   font-family: var(--default-font-family);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 img {
