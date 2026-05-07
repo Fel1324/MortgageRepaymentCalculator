@@ -1,0 +1,139 @@
+#calculator-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: .625rem;
+}
+
+.label {
+  color: var(--slate-500);
+  font-size: .875rem;
+}
+
+.input-base {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 2.75rem;
+  font-weight: 700;
+
+  border: .0625rem solid var(--slate-500);
+  border-radius: .25rem;
+}
+
+.input-text {
+  overflow: hidden;
+
+  &:hover {
+    border-color: var(--slate-900);
+  }
+
+  &:focus-within {
+    border-color: var(--lime);
+    & > span {
+      color: var(--slate-900);
+      background-color: var(--lime);
+    }
+  }
+
+  & > input[type="text"] {
+    all: unset;
+    flex: 1;
+    padding-inline: 1rem;
+    color: var(--slate-900);
+  }
+
+  & > span {
+    background-color: var(--slate-100);
+    color: var(--slate-500);
+    
+    height: 100%;
+    padding-inline: 1rem;
+
+    text-align: center;
+    align-content: center;
+  }
+}
+
+.input-radio {
+  gap: 1rem;
+
+  &:hover,
+  &:focus-within {
+    border-color: var(--lime);
+  }
+
+  & > input[type="radio"] {
+    appearance: none;
+  }
+
+  & > .radio {
+    position: relative;
+    border-radius: 100%;
+    border: .0625rem solid var(--slate-500);
+
+    width: 1rem;
+    height: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &:has(:checked){
+    background-color: hsla(61, 70%, 52%, 0.14);
+    border-color: var(--lime);
+
+    & > .radio{
+      border-color: var(--lime);
+
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: .5rem;
+        height: .5rem;
+        background-color: var(--lime);
+        border-radius: 50%;
+      }
+    }
+  }  
+
+  & > label {
+    flex: 1;
+    align-content: center;
+
+    height: 100%;
+    color: var(--slate-900);
+    font-weight: 700;
+  }
+}
+
+.submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .75rem;
+
+  background-color: var(--lime);
+  border-radius: 3.125rem;
+  border: 0;
+
+  height: 3rem;
+  line-height: normal;
+  color: var(--slate-900);
+  font-weight: 700;
+
+  transition: opacity 250ms ease-in-out;
+
+  &:hover {
+    opacity: .8;
+  }
+}
