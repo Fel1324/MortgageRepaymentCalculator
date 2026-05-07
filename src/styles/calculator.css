@@ -1,6 +1,10 @@
 #calculator {
   background-color: var(--white);
   padding: 1.25rem 1.25rem 0;
+
+  width: 100%;
+  max-width: 26.5625rem;
+  margin-inline: auto;
 }
 
 .main-title {
@@ -18,5 +22,18 @@
 
   &:hover {
     color: var(--slate-900);
+  }
+}
+
+@media screen and (width >= 70rem) {
+  #calculator {
+    max-width: 100%;
+    padding: 2.25rem;
+
+    border-radius: 2rem 0 0 2rem;
+  }
+
+  .main-title {
+    margin-right: auto;
   }
 }

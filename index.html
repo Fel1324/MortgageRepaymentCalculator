@@ -13,8 +13,10 @@
 <body>
   <main>
     <div id="calculator">
-      <h1 class="main-title">Mortgage Calculator</h1>
-      <button id="clear" type="button">Clear All</button>
+      <div class="flex">
+        <h1 class="main-title">Mortgage Calculator</h1>
+        <button id="clear" type="button">Clear All</button>
+      </div>
     
       <form id="calculator-form">
         <div class="input-wrapper">
@@ -25,19 +27,21 @@
           </div>
         </div>
 
-        <div class="input-wrapper">
-          <label class="label" for="mortgage-term">Mortgage Term</label>
-          <div class="input-text input-base">
-            <input type="text" name="mortgage-term" id="mortgage-term">
-            <span>years</span>
-          </div>
-        </div> 
-        
-        <div class="input-wrapper">
-          <label class="label" for="interest-rate">Interest Rate</label>
-          <div class="input-text input-base">
-            <input type="text" name="interest-rate" id="interest-rate">
-            <span>%</span>
+        <div class="flex">
+          <div class="input-wrapper mb-20">
+            <label class="label" for="mortgage-term">Mortgage Term</label>
+            <div class="input-text input-base">
+              <input type="text" name="mortgage-term" id="mortgage-term">
+              <span>years</span>
+            </div>
+          </div> 
+          
+          <div class="input-wrapper">
+            <label class="label" for="interest-rate">Interest Rate</label>
+            <div class="input-text input-base">
+              <input type="text" name="interest-rate" id="interest-rate">
+              <span>%</span>
+            </div>
           </div>
         </div>
         

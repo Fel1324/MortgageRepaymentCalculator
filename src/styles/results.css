@@ -1,6 +1,7 @@
 #results {
   background-color: var(--slate-900);
-  padding-block: 2rem;
+  padding: 2rem;
+  align-content: center;
 
   &.empty {
     text-align: center;
@@ -16,5 +17,13 @@
 
   & > p {
     color: var(--slate-500);
+    max-width: 27.5rem;
+    margin-inline: auto;
+  }
+}
+
+@media screen and (width >= 70rem) {
+  #results {
+    border-radius: 0 2rem 0 5.5rem;
   }
 }
