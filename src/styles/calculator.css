@@ -25,7 +25,7 @@
   }
 }
 
-@media screen and (width >= 70rem) {
+@media screen and (width >= 64rem) {
   #calculator {
     max-width: 100%;
     padding: 2.25rem;

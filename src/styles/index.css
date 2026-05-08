@@ -1,6 +1,7 @@
 @import url("./calculator.css");
 @import url("./calculator-form.css");
 @import url("./results.css");
+@import url("./errors.css");
 
 *,
 *::after,
@@ -22,6 +23,7 @@
   --slate-500: hsl(200, 26%, 54%);
   --slate-700: hsl(200, 24%, 40%);
   --slate-900: hsl(202, 55%, 16%);
+  --slate-dark: hsl(201, 57%, 11%);
 
   --default-font-family: "Plus Jakarta Sans", sans-serif;
 }
@@ -42,7 +44,7 @@ main {
   gap: 2rem;
 
   width: 100%;
-  max-width: 70rem;
+  max-width: 64rem;
   margin-inline: auto;
 }
 
@@ -55,13 +57,13 @@ button {
   font-size: 1rem;
 }
 
-@media screen and (width < 70rem) {
+@media screen and (width < 64rem) {
   .mb-20 {
     margin-bottom: 1.25rem;
   }
 }
 
-@media screen and (width >= 70rem) {
+@media screen and (width >= 64rem) {
   body {
     display: flex;
     align-items: center;

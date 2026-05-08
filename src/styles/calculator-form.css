@@ -139,7 +139,7 @@
   }
 }
 
-@media screen and (width >= 70rem) {
+@media screen and (width >= 64rem) {
   #calculator-form {
     gap: 1.5rem;
   }

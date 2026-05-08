@@ -19,42 +19,45 @@
       </div>
     
       <form id="calculator-form">
-        <div class="input-wrapper">
+        <div id="mortgage-amount-wrapper" class="input-wrapper">
           <label class="label" for="mortgage-amount">Mortgage Amount</label>
           <div class="input-text input-base">
             <span>£</span>
-            <input type="text" name="mortgage-amount" id="mortgage-amount">
+            <input type="text" name="mortgage-amount" id="mortgage-amount" form="calculator-form">
           </div>
+          <small class="error-message">This field is required</small>
         </div>
 
         <div class="flex">
-          <div class="input-wrapper mb-20">
+          <div id="mortgage-term-wrapper" class="input-wrapper mb-20">
             <label class="label" for="mortgage-term">Mortgage Term</label>
             <div class="input-text input-base">
-              <input type="text" name="mortgage-term" id="mortgage-term">
+              <input type="text" name="mortgage-term" id="mortgage-term" form="calculator-form">
               <span>years</span>
             </div>
+            <small class="error-message">This field is required</small>            
           </div> 
           
-          <div class="input-wrapper">
+          <div id="interest-rate-wrapper" class="input-wrapper">
             <label class="label" for="interest-rate">Interest Rate</label>
             <div class="input-text input-base">
-              <input type="text" name="interest-rate" id="interest-rate">
+              <input type="text" name="interest-rate" id="interest-rate" form="calculator-form">
               <span>%</span>
             </div>
+            <small class="error-message">This field is required</small>
           </div>
         </div>
         
         <div class="input-wrapper">
           <span class="label">Mortgage Type</span>
           <div class="input-radio input-base">
-            <input type="radio" name="mortgage-type" id="repayment">
+            <input type="radio" name="mortgage-type" id="repayment" form="calculator-form">
             <div class="radio"></div>
             <label for="repayment">Repayment</label>
           </div>
 
           <div class="input-radio input-base">
-            <input type="radio" name="mortgage-type" id="interest-only">
+            <input type="radio" name="mortgage-type" id="interest-only" form="calculator-form">
             <div class="radio"></div>
             <label for="interest-only">Interest Only</label>
           </div>          
@@ -69,17 +72,6 @@
 
     <div id="results"></div>
   </main>
-
-  <!--  
-  Your results
-
-  Your results are shown below based on the information you provided. 
-  To adjust the results, edit the form and click “calculate repayments” again.
-
-  Your monthly repayments
-
-  Total you'll repay over the term
-  -->
 
   <script type="module" src="./src/scripts/main.js"></script>
 </body>
