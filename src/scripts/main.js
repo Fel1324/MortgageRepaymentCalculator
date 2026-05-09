@@ -40,16 +40,19 @@ form.onsubmit = (e) => {
   const mortgageTerm = calculatorForm.get("mortgage-term")
   const interestRate = calculatorForm.get("interest-rate")
 
-  validateRequiredFields({
-    amount: mortgageAmount,
-    term: mortgageTerm,
-    rate: interestRate,
-  });
-
   const amount = Number(mortgageAmount.split(",").join(""))
   const term = Number(mortgageTerm)
   const rate = Number(interestRate)
 
+  const error = validateRequiredFields({
+    amount,
+    term,
+    rate,
+  });
+
+  if(error) return
+
+  // Refatorar
   const annualInterestRate = rate / 100
   const termPerMonth = term * 12
 

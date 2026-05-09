@@ -21,7 +21,8 @@ span.error-span {
 }
 
 .error-message {
-  display: none;
+  visibility: hidden;
   font-size: .75rem;
   color: var(--red);
+  height: 1.5rem;
 }

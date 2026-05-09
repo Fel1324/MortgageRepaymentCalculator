@@ -57,12 +57,6 @@ button {
   font-size: 1rem;
 }
 
-@media screen and (width < 64rem) {
-  .mb-20 {
-    margin-bottom: 1.25rem;
-  }
-}
-
 @media screen and (width >= 64rem) {
   body {
     display: flex;

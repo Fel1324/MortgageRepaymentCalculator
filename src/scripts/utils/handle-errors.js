@@ -18,19 +18,19 @@ function toggleErrorState(span, inputDiv, errorMsg, addStyleError) {
   if (addStyleError) {
     span.classList.add("error-span")
     inputDiv.classList.add("error-input")
-    errorMsg.style.display = "block"
+    errorMsg.style.visibility = "visible"
 
   } else {
     span.classList.remove("error-span")
     inputDiv.classList.remove("error-input")
-    errorMsg.style.display = "none"
+    errorMsg.style.visibility = "hidden"
   }
 }
 
 function setupInputValidation(inputEl, span, inputDiv, errorMsg) {
   toggleErrorState(span, inputDiv, errorMsg, true)
   
-  inputEl.oninput = () => {
+  inputEl.onchange = () => {
     if(inputEl.value === "") {
       toggleErrorState(span, inputDiv, errorMsg, true)
     } else {
@@ -41,19 +41,25 @@ function setupInputValidation(inputEl, span, inputDiv, errorMsg) {
 
 export function validateRequiredFields(formValues) {
   const { amount, term, rate } = formValues;
+  console.log(formValues)
 
   if(!amount) {
     setupInputValidation(mortgageAmountEl, amountSpan, amountInputDiv, amountErrorMessage)
-    return
+    console.log(formValues.amount)  
   }
 
   if(!term) {
     setupInputValidation(mortgageTermEl, termSpan, termInputDiv, termErrorMessage)
-    return
+    console.log(formValues.term) 
   }
 
   if(!rate) {
     setupInputValidation(interestRateEl, rateSpan, rateInputDiv, rateErrorMessage)
-    return;
+    console.log(formValues.rate)
+  }
+
+  if(!amount || !term || !rate) {
+    console.log("error")
+    return true;
   }
 }
