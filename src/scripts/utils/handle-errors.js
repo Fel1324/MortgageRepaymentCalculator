@@ -41,25 +41,20 @@ function setupInputValidation(inputEl, span, inputDiv, errorMsg) {
 
 export function validateRequiredFields(formValues) {
   const { amount, term, rate } = formValues;
-  console.log(formValues)
 
   if(!amount) {
     setupInputValidation(mortgageAmountEl, amountSpan, amountInputDiv, amountErrorMessage)
-    console.log(formValues.amount)  
   }
 
   if(!term) {
     setupInputValidation(mortgageTermEl, termSpan, termInputDiv, termErrorMessage)
-    console.log(formValues.term) 
   }
 
   if(!rate) {
     setupInputValidation(interestRateEl, rateSpan, rateInputDiv, rateErrorMessage)
-    console.log(formValues.rate)
   }
 
   if(!amount || !term || !rate) {
-    console.log("error")
     return true;
   }
 }

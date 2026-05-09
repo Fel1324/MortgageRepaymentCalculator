@@ -1,9 +1,9 @@
 const resultsEl = document.querySelector("#results")
 
 export function showResults(results) {
-  const { repayments, total } = results;
+  const { monthlyRepayments, totalRepay } = results;
 
-  if(!repayments || !total) {
+  if(!monthlyRepayments || !totalRepay) {
     resultsEl.classList.add("empty")
     resultsEl.classList.remove("not-empty")
 
@@ -27,12 +27,12 @@ export function showResults(results) {
       <div class="show-results">
         <div class="monthly-wrapper">
           <p>Your monthly repayments</p>
-          <strong class="monthly">${repayments}</strong>
+          <strong class="monthly">${monthlyRepayments}</strong>
         </div>
 
         <div class="total-wrapper">
           <p>Total you'll repay over the term</p>
-          <strong class="total">${total}</strong>
+          <strong class="total">${totalRepay}</strong>
         </div>        
       </div>
     `;    
